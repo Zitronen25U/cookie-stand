@@ -1,3 +1,10 @@
 body{
   background-color: bisque;
 }
+
+ul{
+  padding: 10px;
+  border: 10px;
+  border-radius: thick black;
+  margin: 10px;
+}
