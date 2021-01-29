@@ -1,6 +1,6 @@
 'use strict';
 
-// get elements by ID for the 5 lists
+// SEE README FOR CREDIT
 
 var seattleList = document.getElementById('seattle');
 var tokyoList = document.getElementById('tokyo');
