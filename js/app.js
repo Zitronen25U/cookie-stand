@@ -1,41 +1,64 @@
 'use strict';
 
+console.log('hello world');
+
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+
 
 let seattle = {
   name: 'Seattle',
-  min: 23,
-  max: 65,
-  avg: 6.3,
-  // a method to calculate random number of customers per hour
-  // generate a method to calculate and populate our number of cookies sold per hour array
-  // a method to render the list items
-};
+  minimumCustomerEachHour: 23,
 
-let tokyo = {
-  name: 'Tokyo',
-  min: 3,
-  max: 24,
-  avg: 1.2,
-};
+  maximumCustomerEachHour: 65,
 
-let dubai = {
-  name: 'Dubai',
-  min: 11,
-  max: 38,
-  avg: 3.7,
-};
+  avgerageCookiesSoldPerCustomer: 6.3,
 
-let paris = {
-  name: 'Paris',
-  min: 20,
-  max: 38,
-  avg: 2.3,
-};
+  cookiesSoldPerHourArray: [16, 20, 35, 48, 56, 77, 93, 144, 119, 84, 61, 23, 42, 57],
 
-let lima = {
-  name: 'Lima',
-  min: 2,
-  max: 16,
-  avg: 4.6,
-}
+  dailyStoreTotal: 0,
+
+  randomCustomerEachHour: function(){
+    // generates random number from my min and max values
+    return Math.floor(Math.random() * (this.maximumCustomerEachHour - this.minimumCustomerEachHour + 1) + this.minimumCustomerEachHour);
+  },
+
+  calcCookiesSoldEachHour: function(){
+    let randomCustomerForOneHour = this.randomCustomerEachHour();
+    console.log(randomCustomerForOneHour);
+    console.log('I am inside of the calcCookiesSoldEachHour');
+  },
+  render: function(){
+    console.log('Im in the render method');
+  }
+};
+seattle.render();
+seattle.randomCustomerEachHour();
+
+// let tokyo = {
+//   name: 'Tokyo',
+//   minimumCustomerEachHour: 3,
+//   maximumCustomerEachHour: 24,
+//   avgerageCookiesSoldPerCustomer: 1.2,
+// };
+
+// let dubai = {
+//   name: 'Dubai',
+//   minimumCustomerEachHour: 11,
+//   maximumCustomerEachHour: 38,
+//   avgerageCookiesSoldPerCustomer: 3.7,
+// };
+
+// let paris = {
+//   name: 'Paris',
+//   minimumCustomerEachHour: 20,
+//   maximumCustomerEachHour: 38,
+//   avgerageCookiesSoldPerCustomer: 2.3,
+// };
+
+// let lima = {
+//   name: 'Lima',
+//   minimumCustomerEachHour: 2,
+//   maximumCustomerEachHour: 16,
+//   avgerageCookiesSoldPerCustomer: 4.6,
+// };
+
