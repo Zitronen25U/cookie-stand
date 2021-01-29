@@ -2,7 +2,7 @@
 
 console.log('hello world');
 
-let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+// let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 
 let seattle = {
@@ -13,26 +13,28 @@ let seattle = {
 
   avgerageCookiesSoldPerCustomer: 6.3,
 
-  cookiesSoldPerHourArray: [16, 20, 35, 48, 56, 77, 93, 144, 119, 84, 61, 23, 42, 57],
+  cookiesSoldPerHourArray: [],
 
   dailyStoreTotal: 0,
 
-  randomCustomerEachHour: function(){
+  randomCustomerPerHour: function(){
     // generates random number from my min and max values
     return Math.floor(Math.random() * (this.maximumCustomerEachHour - this.minimumCustomerEachHour + 1) + this.minimumCustomerEachHour);
   },
 
   calcCookiesSoldEachHour: function(){
-    let randomCustomerForOneHour = this.randomCustomerEachHour();
+    let randomCustomerForOneHour =  this.randomCustomerPerHour();
     console.log(randomCustomerForOneHour);
-    console.log('I am inside of the calcCookiesSoldEachHour');
+    // multiply customer number by average customer
+    // round up to the nearest number
+    // push into the array cookoies sold per hour
   },
   render: function(){
-    console.log('Im in the render method');
-  }
+    this.calcCookiesSoldEachHour();
+  },
 };
+
 seattle.render();
-seattle.randomCustomerEachHour();
 
 // let tokyo = {
 //   name: 'Tokyo',
