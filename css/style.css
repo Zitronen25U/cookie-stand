@@ -9,6 +9,18 @@ ul{
   margin: 10px;
 }
 
-#tableHead{
-  
+/* td{
+  border: 1px solid black;
+} */
+
+table tr td {
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  font: 16px bold black;
+}
+
+thead{
+  border-radius: 1px solid black;
+  font: 32px, bold black;
 }
