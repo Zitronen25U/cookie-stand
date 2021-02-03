@@ -34,7 +34,12 @@ header img{
 header span{
   display: inline-block;
   line-height: 100px;
-  margin-left: 90px;
+  margin-left: 60px;
+}
+
+header nav:first-child {
+  width: 960px;
+  height: 540px;
 }
 
 header span:nth-child(2){
@@ -56,6 +61,11 @@ main img{
   margin-top: 30px;
 }
 
+main:first-child{
+  width: 960px;
+  height: 540px;
+  margin-left: 30px;
+}
 main li:first-child{
   margin-left: 0px;
 }
@@ -74,7 +84,6 @@ main article{
 main h2{
   margin-left: 30px;
   font-size: 20px;
-
 }
 
 main p{
@@ -102,15 +111,25 @@ article div a{
   color: #eee;
   text-decoration: none;
 }
+
 article div:hover{
   background-color: red;
   transition: 350ms;
 }
+
 
 /* Footer */
 
 footer{
   background-color: #444;
   height: 130px;
+  margin-top: 30px; 
+}
+
+footer a{
+  color: #eee;
+  text-decoration: none;
+  float: left;
   margin-top: 30px;
+  margin-left: 10px;
 }
