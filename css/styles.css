@@ -11,6 +11,14 @@ header{
   height: 100px;
 }
 
+h1{
+  margin: auto;
+  color: #eee;
+  float: right;
+  margin-top: 30px;
+  margin-right: 350px;
+}
+
 nav{
   width: 960px;
   margin: auto;
@@ -19,6 +27,8 @@ nav{
 header img{
   margin-top: 15px;
   float: left;
+  width: 200px;
+  height: 75px;
 }
 
 header span{
@@ -88,10 +98,15 @@ article div{
   border-radius: 10px;
 }
 
+article div a{
+  color: #eee;
+  text-decoration: none;
+}
 article div:hover{
   background-color: red;
   transition: 350ms;
 }
+
 /* Footer */
 
 footer{
