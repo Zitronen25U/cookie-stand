@@ -54,6 +54,7 @@ NewCookieStand.prototype.render = function () {
   tbody.appendChild(tr);
 };
 
+
 let seattle = new NewCookieStand ('Seattle', 23, 65, 6.3);
 let tokyo = new NewCookieStand ('Tokyo', 3, 24, 1.2);
 let dubai = new NewCookieStand ('Dubai', 11, 38, 3.7);
