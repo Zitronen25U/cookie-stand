@@ -36,7 +36,6 @@ NewCookieStand.prototype.calcCookiesPerHour = function() {
 NewCookieStand.prototype.render = function () {
   this.calcCookiesPerHour();
   let tr = document.createElement('tr');
-
   let th = document.createElement('th');
   th.textContent = this.name;
   tr.appendChild(th);
@@ -54,8 +53,25 @@ NewCookieStand.prototype.render = function () {
   tbody.appendChild(tr);
 };
 
-funtion renderHeader(){
-  
+function header(){
+  let tr = document.createElement('tr');
+  let th = document.createElement('th');
+  th.textContent = 'Hours';
+  tr.appendChild(th);
+  tbody.appendChild(tr);
+
+  for (let i = 0; i < hours.length; i++) {
+    let td = document.createElement('td');
+    td.textContent = hours[i];
+    tr.appendChild(td);
+    console.log(hours[i]);
+  }
+
+  let td = document.createElement('td');
+  td.textContent = 'Daily Total';
+  tr.appendChild(td);
+  tbody.appendChild(tr);
+
 }
 
 let seattle = new NewCookieStand ('Seattle', 23, 65, 6.3);
@@ -64,10 +80,9 @@ let dubai = new NewCookieStand ('Dubai', 11, 38, 3.7);
 let paris = new NewCookieStand ('Paris', 20, 38, 2.3);
 let lima = new NewCookieStand ('Lima', 2, 16, 4.6);
 
+header();
 seattle.render();
 tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
-
-
