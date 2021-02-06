@@ -171,3 +171,18 @@ table, th, td{
 tr:hover{
   background-color: lightgray;
 }
+
+form{
+  margin: 5px;
+  padding: 10px;
+}
+form label{
+ width: 20%;
+ margin-left: 30px;
+ padding: 5px;
+ display: inline-block;
+}
+
+form button{
+  float: right;
+}

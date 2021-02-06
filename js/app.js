@@ -6,6 +6,8 @@ const newList = [];
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 let tbody = document.getElementById('tb');
+let myForm = document.querySelector('form');
+console.log(myForm);
 
 function NewCookieStand (name, minCust, maxCust, avgCookies) {
   this.name = name;
@@ -74,6 +76,20 @@ function header(){
 
 }
 
+
+function handleSubmit(event){
+  event.preventDefault();
+
+  let name = event.target.storelocation.value;
+  let minCust = +event.target.mincustomer.value;
+  let maxCust = +event.target.maxcustomer.value;
+  let avgCookies = +event.target.avgcookies.value;
+
+  let formNewStand = NewCookieStand(name, minCust, maxCust, avgCookies);
+  formNewStand.render();
+}
+
+
 let seattle = new NewCookieStand ('Seattle', 23, 65, 6.3);
 let tokyo = new NewCookieStand ('Tokyo', 3, 24, 1.2);
 let dubai = new NewCookieStand ('Dubai', 11, 38, 3.7);
@@ -86,4 +102,5 @@ tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
+myForm.addEventListener('submit', handleSubmit);
 
