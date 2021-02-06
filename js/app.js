@@ -85,7 +85,7 @@ function handleSubmit(event){
   let maxCust = +event.target.maxcustomer.value;
   let avgCookies = +event.target.avgcookies.value;
 
-  let formNewStand = NewCookieStand(name, minCust, maxCust, avgCookies);
+  let formNewStand = new NewCookieStand(name, minCust, maxCust, avgCookies);
   formNewStand.render();
 }
 
